@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式</title>
+		<script>
+			var reg=/hello/i;
+			var str="Hello world,Hello Kitty";
+			alert(str.match(reg));//默认只返回第一个匹配的字符串
+			
+			var reg1=/hello/ig; //i不分大小写，g全局匹配
+			var str1="Hello world,Hello Kitty";
+			alert(str1.match(reg1)); //
+			
+			var reg2=/hello/i; //i不分大小写，g全局匹配
+			var str2="Hello world,Hello Kitty";
+			alert(str2.search(reg2)); //返回第一个和正则表达式匹配的字符串的起始位置
+			
+			var reg3=/hello/ig; //i不分大小写，g全局匹配
+			var str3="Hello world,Hello Kitty";
+			alert(str3.replace(reg3,"hehehe")); //替换所有第一个符号正则表达式的字符串
+		 
+		    var reg4=/ /; //i不分大小写，g全局匹配
+			var str4="Hello world,Hello Kitty";
+			alert(str4.split(reg4)); //
+		
+		
+		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

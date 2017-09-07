@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式：专门针对字符串</title>
+		<script>
+			//验证qq号是否合法：5-15位，不能以0开头，全是数字
+      		var qq="0123343";
+//			  if(qq.length>=5&&qq.length<=15)
+//			  {
+//			  	if(qq.charCodeAt(0)!=48){
+//			  		if(!isNaN(qq))
+//			  		alert("合法的");
+//			  		else
+//			  		alert("含有非数字");
+//			  	}
+//			  
+//			  	else
+//			  	alert("以0开头，不合法");
+//			  }
+//			  else{
+//			  	alert("长度不合法");
+//			  }
+			  //定义一个验证qq的正则表达式
+//			  var reg=/[1-9][0-9]{4,14}/;
+//			  alert(reg.test(qq));
+//
+    			//使用正则表达式进行验证的方式：test(),exce();
+			    var reg=new RegExp("hello","i");//i不区分大小写  g全局匹配   m多行匹配
+			    var str ="Hello world";
+			    alert(reg.test(str));//字符串中含有和正则表达式匹配的则返回true。
+			    alert(reg.exec(str)); //返回匹配的字符串（返回的类型是数组对象）。
+				var reg1=/hello/;
+				var str1="hello world";
+				alert(reg1.test(str1));
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式</title>
+		<script>
+			//使用exec()方法返回数组
+//			var reg=/[a-z]+\s\d{4}/
+//			var str="hello 2020";
+//			alert(reg.exec(str));
+//			
+			//捕获性分组。
+//			var reg=/([a-z]+)\s(\d{4})/;
+//			var str="hello 2020";
+//			alert(reg.exec(str));
+//			alert(reg.exec(str)[0]);
+//			alert(reg.exec(str)[1]);
+//			alert(reg.exec(str)[2]);
+			
+			//数组中第一个数据是整个正则表达式的字符串
+			//数组中第二个数据是第一个分组中的字符串
+			//数组中第三个数据是第二个分组中的字符串
+			
+			//非捕获分组？：不想捕获
+//			var reg=/([a-z]+)\s(?:\d{4})/;
+//			var str="hello 2020";
+//			alert(reg.exec(str));
+			
+			//前瞻捕获?=
+//			var reg=/[a-z]+(?=gle)/;
+//			var str="google";
+//			alert(reg.exec(str));
+			
+			//换行模式g全局匹配，m多行匹配
+			var reg=/^\d+/gm;
+			var  str="1.baidu\n2.google\n3.ie";
+			alert(str.replace(reg,"*"))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function类型内部属性</title>
+		<script>
+			//函数内部属性：
+			//1、arguments属性：指向一个类似数组但不是数组的对象，存储的实际传递给函数的参数，而不局限于函数声明所定义的参数列表。 
+			function show(a,b){
+				if(arguments.length==2) 
+				   alert(a+b);
+				 else if(arguments.length==3)
+				   alert(arguments[0]+arguments[1]+arguments[2]);
+			}
+			show("hello","world","haha");  //arguments实际传递的参数
+			alert(show.length);//
+			
+			//arguments中的callee属性：它表示对函数对象本身的引用
+			//使用递归实现阶乘
+			function jie(n){
+				if(n==1)
+				return 1;
+				else
+				return n*arguments.callee(n-1);
+			}
+			
+			//局部变量和全局变量
+			var b=90;  //全局变量，任何一个函数都可以使用。公共的
+			function fun(){
+				var a=89;//局部变量：只能被其所在的函数使用
+				var b=80; //当局部变量和全局变量同名时，全局变量无效。
+				alert(b);
+			}
+			fun();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

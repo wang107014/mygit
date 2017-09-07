@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>面向对象和原型</title>
+		<script>
+			//工厂模式解决了重复实例化的问题，但是存在识别问题，因为根本无法清除他们到底是哪个类型，因此采用构造函数来创建特定对象。
+			function Student(name,age){
+				this.name=name; //后台创建了new Object()
+				this.age=age;   //this就指向了这个对象
+				this.study=function(){
+					alert(this.name+","+this.age);
+				};//后台返回了该对象
+			}
+			var stu1=new Student("张三",34);
+			alert(stu1.name);
+			alert(stu1.age);
+			stu1.study();
+//			使用构造函数的方法，和使用工厂模式的方法他们不同之处如下：
+//			构造函数方法没有显示的创建对象(new Object());
+//			直接将属性和方法赋值给this对象；
+//			没有return语句
+			var stu2=new Student("李四",87);
+			alert(stu2.name);
+			alert(stu2.age);
+			stu2.study();
+//			构造函数的特点
+//			1.函数名首字母大写，为了和普通函数区分
+//			2.使用构造函数必须使用new
+			//把构造函数当成普通函数使用
+			Student("wang",33);//没意义
+			alert(typeof stu1)
+			alert(stu1 instanceof Student);
+			alert(stu2 instanceof Student);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

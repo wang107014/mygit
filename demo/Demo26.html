@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式</title>
+		<script>
+			// \s匹配空白字符、空格、制表符和换行符
+//			var reg=/java\sscript/;
+//			var str="study java script";
+//			alert(reg.test(str));
+//			
+//			//()分组
+//			var reg=/(javascript){2,4}/
+//			var str="study javascriptjavascript";
+//			alert(reg.test(str));
+//			alert(RegExp.$1);
+//			
+//			var reg=/(.*)\s(.*)/;
+//			var str="hello world";
+//			var str1=str.replace(reg,'$2,$1');
+//			alert(str1);
+//			
+			var reg=/6(.*)6/
+			var str="study 6javascript6javascript6";
+			alert(reg.test(str));
+			var str1=str.replace(reg,'$1');
+			alert(str1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

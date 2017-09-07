@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>嵌套循环</title>
+		<script>
+			
+			for(var j=1;j<6;j++)//外循环控制的是行数
+			{
+				
+				for(var i=1;i<10;i++)//内循环控制的是每一行显示的内容
+				 document.write("*");
+				 document.write("<br/>");//换行
+			}
+			
+			for(var k=5;k>=1;k--)
+			{
+			     for(var n=1;n<=k;n++){
+			     	document.write("*");
+			     }
+			     document.write("<br/>");
+			}
+			
+			for(var a=1;a<=5;a++)
+			{
+				if(a==3){
+					break;
+				}
+				document.write(a);
+				document.write("<br/>");
+			}
+			
+			flag:
+			for(var s=1;s<=5;s++)
+			{
+				for(var d=1;d<5;d++)
+				{
+					if(d%2==0){
+						continue flag;//结束外部循环
+						
+					}
+					document.write(s);
+				}
+				
+			}
+			
+			for(var w=1;w<6;w++)
+			{
+				if(w%2==0)
+				continue; //结束本次的循环，直接进入下一次循环，也就是去执行w++
+				document.write(w);
+			}
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>
