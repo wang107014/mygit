@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+//			function test(mse){
+//				alert(mse);
+//			}
+//			var f=test;
+//			f("hello");
+
+			//this:是一个引用，指向函数被调用时的对象
+			var name="zhangsan";
+			function show()
+			{
+				//alert(this.name);
+			}
+			window.show();//windows对象 this指向的就是window对象
+			var obj={
+				name:"lisi",
+				show:function (){
+					alert(this.name);
+				}
+			}  
+			//obj.show();//this指向的是obj对象
+			
+			var color="红色";
+			function funa()
+			{
+				alert(this.color);
+			}
+			var objs={
+				color:"紫色",
+			};
+			funa();
+			objs.showcolor=funa;
+			objs.showcolor();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

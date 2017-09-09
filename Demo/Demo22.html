@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的常用方法</title>
+		<script>
+			//subStr(index1,index2)第一个参数表示截取的起始索引，第二个参数表示截取的字符的个数。
+			var ss="hello world 努力学习 abcdefg";
+			var s1=ss.substr(5,2);
+			alert(s1);
+			
+			//subString(index1,index2):第一个参数表示截取的起始索引，第二个参数表示截取的结束位置（不包含结束位置上的字符，到结束位置的前一位）
+			var s2=ss.substring(6,8);
+			alert(s2);
+			
+			var str="hello word,hello kitty";
+			alert(str.match("hello"));
+			
+			var s3=str.search("hello");
+			alert(s3);
+			
+			var s4=str.replace("hello","hehehe");
+			alert(s4);
+			
+			var str5="zhangsan,lisi,wangwu,zhaoliu";
+			var s5=str5.split(",");
+			alert(s5[2]);
+			
+			var str6="owksdjfkj";
+			alert(str6.toUpperCase());
+			var str7="KJKLSDJFADSKL";
+			alert(str7.toLowerCase());
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

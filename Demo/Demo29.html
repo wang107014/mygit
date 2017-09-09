@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function类型</title>
+		<script>
+			//一、函数的声明方式
+			//1、普通方式
+			function fun(num1,num2){
+				return num1,num2;				
+			}
+			//1、使用变量方式
+			var fun2=function(a,b){
+				return a+b;
+			}
+			//3、使用new创建函数
+			var fun3=new Function('n1','n2','return n1+n2');//不建议使用
+			
+			//二、函数作为参数来传递：
+			function add(a,b){
+				return a+b;
+			}
+			function show(fun,num){
+				return fun(num,80);
+			}
+			alert(show(add,66));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

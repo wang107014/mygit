@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数</title>
+		<script>
+			//具备特定功能的一般独立的代码段
+			function show(){
+				alert("你好")
+				alert("我好")
+				alert("大家好")
+			}
+			show();//调用函数
+			
+			function fun(a1,a2){
+				var sum=a1+a2;
+				//alert(sum)
+				return sum;
+			}
+			var s=fun(100,200);
+			//alert(s)
+			//求两个数中的最大值
+			function getmax(num1,num2){
+				return num1>num2?num1:num2;
+			}
+			//判断两个数是否相等
+			function ifequal(n1,n2){
+				return n1==n2;
+			}
+			//打印一个5行5列的矩形
+			function rectangle(){
+				for(j=1;j<=5;j++){
+					for(var k=1;k<=5;k++){
+						document.write("*");
+						
+					}
+					document.write("<br />");
+				}
+			}
+			getmax();
+			ifequal();
+			rectangle();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

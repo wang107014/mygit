@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>继承</title>
+		<script>
+			//继承是面向对象中一个比较核心的概念，而实现继承的方式依靠原型链完成
+			function Box()
+			{
+				this.name="wang";
+			}
+			function Desk()
+			{
+				this.age=100;
+				
+			}
+			Desk.prototype=new Box();//Desk继承了Box,形成了一个原型
+			var desk=new Desk();
+			alert(desk.age);
+			alert(desk.name);
+			//被继承的类型称为父类，继承的称为子类,可以把子类对象看成父类类型。
+			alert(desk instanceof Desk);
+			alert(desk instanceof Box);
+			
+			//使用原型实现继承存在的问题
+			function Test(age){
+				this.family=["妈妈","爸爸"];
+				this.age=age;
+			}
+			function util(){}
+			util.prototype=new Test(20);
+			var ul=new util();
+			ul.family.push("姐姐");
+			alert(ul.family);
+			var u2=new util();
+			alert(u2.family);
+			//当原型中存在引用类型时，存在数据修改时的问题
+            //子类类型的对象无法给父类传参数。   
+
+			   
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

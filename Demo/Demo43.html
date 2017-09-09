@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>闭包</title>
+		<script>
+//			//闭包：在一个函数内部创建另一个函数，通过另一个函数访问这个函数的局部变量
+//			function show(){
+//				var name="lisi";
+//				return function(){
+//					return name;
+//				};
+//			}
+//			var fun=show();
+//			alert(fun());
+//			alert(show()())
+//			//使用闭包的优势：实现一个变量累加
+////			function add(){
+////				var age=10;
+////				age++;
+////				return age;
+////			}
+////			alert(add());
+//			//调用函数时为局部变量开辟内存，函数调用结束时，局部变量内存立刻被释放
+//			var age=10; //一直在内存中，直到程序运行结束
+//			function add1(){
+//				
+//				age++;
+//				return age;
+//			}
+//			alert(add1());
+//			//全局变量是公共的，容易发生问题
+//			//不适用全局变量实现让age的值主键递增---闭包
+//			function show1(){
+//				var name=90;
+//				return function(){
+//					name++;
+//					return name;
+//				};
+//			}
+//			var fun1=show1();
+//			alert(fun1());
+//			alert(fun1());
+//		    闭包使用的局部变量不会立刻释放内存，会在内存驻留一段时间。
+//		    注意：尽量少用闭包，在必要时再使用闭包
+
+          //闭包中的this在运行时指向window，因为闭包并不属于这个对象的属性或方法。
+//        var obj={
+//        	name:"lisi",
+//        	fun:function(){
+//        		return function(){
+//        			return this;
+//        		};
+//        	}
+//        };
+//        alert(obj.fun()())//window
+            var name="window";
+            var obj={
+          	name:"object",
+          	fun:function(){
+          		return function(){
+          			return this.name;
+          		};
+          	}
+          };
+          alert(obj.fun()())//window
+          alert(obj.fun().call(obj));//对象冒充
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

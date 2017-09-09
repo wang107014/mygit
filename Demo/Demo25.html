@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式规则</title>
+		<script>
+			//.:代表任意字符（换行除外）
+//			var reg=/b..k/
+//			var str="books";
+//			alert(reg.test(str));
+			
+			//?：出现0次或1次     *：出现0次或多次     +：出现1次或多次
+//			var reg=/bo?k/;
+//			var str="books";
+//			alert(reg.test(str));
+//			var reg=/bo*k/;
+//			var str="books";
+//			alert(reg.test(str));
+//			var reg=/bo+k/;
+//			var str="books";
+//			alert(reg.test(str));
+
+			//{m,n}:至少出现m次，最多出现n次     {m,}:至少出现m次    {m}:正好出现m次
+//			var reg=/bo{1,6}k/;
+//			var str="books";
+//			alert(reg.test(str));
+//			var reg=/bo{1,}k/;
+//			var str="books";
+//			alert(reg.test(str));
+//			var reg=/bo{1}k/;
+//			var str="books";
+//			alert(reg.test(str));
+            
+            //[]限定某一位上字符的取值范围   [^]:限定某一位上不能取的值
+//          var reg=/[a-zA-Z0-9]ook/;
+//			var str="books";
+//			alert(reg.test(str));
+//			var reg=/[^a-zA-Z0-9]ook/;
+//			var str="books";
+//			alert(reg.test(str));
+			
+			//\d等价于[0-9]   \D等价于[^0-9]  \w等价于[a-zA-Z0-9]  \W等价于[^a-zA-Z0-9] 
+//			  var reg=/\dook/;
+//			  var str="books";
+//			  alert(reg.test(str));
+//			  var reg=/\Dook/;
+//			  var str="books";
+//			  alert(reg.test(str));
+//			  var reg=/\wook/;
+//			  var str="books";
+//			  alert(reg.test(str));
+//			  var reg=/\Wook/;
+//			  var str="books";
+//			  alert(reg.test(str));
+			  
+			  var reg=/book$/; //匹配行首  匹配行尾
+			  var str="books";
+			  alert(reg.test(str));
+			  
+		</script>
+ 		</head>
+	<body>
+	</body>
+</html>

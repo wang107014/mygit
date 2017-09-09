@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>String对象概述</title>
+		<script>
+			/*
+			var a=90;
+			var arr=new Array(32,35,3,67);
+			alert(arr.sort()); //自动排序
+			
+			var ab="abc";
+			var ss=new String("abc");//string
+			alert(typeof ab +"===="+typeof ss);//对象字符串
+			alert(ab==ss);//只比较内容不比较类型
+			alert(ab===ss); //内容和类型都要比较
+			alert(ss.length);
+			ss.text="hehe";
+			alert(ss.text);
+		
+			var aa="abcd0987deg&*#";
+		    alert(aa.charAt(0));//根据索引得到字符串中的某一个字符
+		    alert(aa.charAt(aa.length-1));
+		    alert(aa.charAt(-1));//返回空
+		    alert(aa.charCodeAt("s"));
+		    
+		    //打印字符串中每一个字符以及字符对应的编码
+		    var d="abcdefg 012345 ABCDEFG 中国你好!";
+		    for(var i=0;i<d.length;i++){
+		    	document.write("下标为"+i+"的字符是"+d.charAt(i)+"----->"+"该字符的编码是："+d.charCodeAt(i)+"<br/>")
+		    }
+            
+            //String.fromCharCode():根据编码生成字符串
+            var str= String.fromCharCode(98,78,85,20320);
+            alert(str);
+			var cd="*awerottskdjfroljfd";
+			var index=  cd.indexOf("rot");
+			alert(index);//4
+			
+			var index2=cd.indexOf("rol",10);
+			alert(index2)//13
+			
+			var index3=cd.lastIndexOf("j");
+			alert(index3);//16
+			
+			var num=cd.indexOf("afdf");
+			alert(num); //不存在时返回-1
+		   */
+		  
+		  //验证邮箱是否合法
+		  var email="zhangsan.hehe@qq.com"; //含有一个@符号，@号在.前边
+		  
+		  //判断是否含有@
+		  if(email.indexOf("@")>0)
+		  {
+		  	//判断是否只含有一个@符号
+		  	if(email.indexOf("@")==email.lastIndexOf("@")){
+		  		//@符号是否在第一个.的前边，且两个符号不挨着
+		  		if(email.indexOf("@")+1<email.indexOf(".",email.indexOf("@"))){
+		  			alert("合法邮箱");
+		  		}
+		  		else{
+		  			alert("@不在.的前边，不合法");
+		  		}
+		  	}
+		  	else{
+		  		alert("含有多个@，不合法");
+		  	}
+		  }
+		  else
+		  {
+		  	alert("没有@，不合法")
+		  }
+		  
+				
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

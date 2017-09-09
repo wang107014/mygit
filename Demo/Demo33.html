@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function内部方法</title>
+	</head>
+	<script>
+		function sum(num1,num2){
+			return num1+num2;
+		}
+		function show1(num1,num2){
+			return sum.call(this,num1,num2); //第一个参数是调用sum函数的对象，后边的参数是传递给sum的实际数据。
+		}
+		function show2(num1,num2){
+			return sum.apply(this,[num1,num2]);//第一个参数是调用sum函数的对象，
+		}
+		
+		
+	
+		alert(show1(10,10))
+		alert(show2(20,20));
+		
+		//可以使用call() apply()方法改变调用函数的对象
+		function test(){
+			this.property="hello wold";
+		}
+		test();
+		alert(window.property);
+		var obj1={};
+		test.call(obj1);
+		alert(obj1.property);
+	</script>
+	<body>
+	</body>
+</html>

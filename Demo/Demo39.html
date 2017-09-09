@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>原型vv</title>
+		<script>
+			//原型模式
+			function Student(){};
+			Student.prototype={
+					name:"李四",
+					
+					family:['爸爸','妈妈','兄弟姐妹'],
+					fun:function(){
+						return this.name+this.age+this.family;
+					}
+			};
+			var stu1=new Student();
+			stu1.name="张三";
+			stu1.family.push("哥哥");
+			alert(stu1.name);
+			alert(stu1.family);
+			
+			var stu2=new Student();
+			alert(stu2.name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

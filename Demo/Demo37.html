@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>面向对象与原型</title>
+		<script>
+			//开发有两种模式：1.函数模式，2.面向对象
+			var arr=new Array(1,2,3);
+			var a1=arr.length
+			var a2=arr.sort()
+			alert(a1);
+			alert(a2);
+			//创建对象
+			var stu1=new Object();
+			stu1.name="张三";
+			stu1.age=23;
+			stu1.study=function(){
+				alert("我叫"+this.name+"今年"+this.age);
+				
+			}
+//			alert(stu1.name);
+//			alert(stu1.age);
+//			stu1.study();
+			//使用工厂模式创建对象：解决实例化对象产生大量重复问题。
+			function createobj(name,age){
+				var obj=new Object();
+				obj.name=name;
+				obj.age=age;
+				obj.study=function(){
+					alert("我叫"+this.name+"今年"+this.age);
+				}
+				return obj;
+			}
+			var stu3=createobj("张三",23);
+			var stu4=createobj("李四",33);
+			var stu5=createobj("王五",43);
+			alert(stu3.name);
+			alert(stu3.age);
+			stu3.study();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

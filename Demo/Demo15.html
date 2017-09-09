@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>递归:函数自己调用自己</title>
+		<script>
+			function add(a,b){
+				return a+b;				
+			}
+			function show(){
+				var sum=add(100,98);
+				alert(sum);
+			}
+			show();
+			//求从1开始一直到某个数的和。
+			function sum(n){
+				if(n==1){
+					return 1;
+				}
+				else
+				{
+					return n+sum(n-1);
+				}
+			}
+			alert(sum(89));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

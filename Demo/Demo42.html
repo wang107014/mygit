@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>匿名函数</title>
+		<script>
+			//匿名函数就是没有名字的函数
+			function show(){
+				alert("hello");
+			}
+			show();
+			//匿名函数的调用
+			(function(){
+				alert("world");
+			})();  
+			
+			(function(name){
+				 alert(name);
+			})("lisi");
+			
+			var s=(function(name){
+				return name;
+			})("zhangsan");
+			alert(s);
+			
+			alert((function(name){
+				return name;
+			})("wangwu"));
+			
+			//把匿名函数赋值给一个变量
+			var m=function(){
+				alert("haha");
+			}
+			m();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

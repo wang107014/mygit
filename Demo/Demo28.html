@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>正则表达式验证规则</title>
+		<script>
+			//验证手机号
+			var reg=/^1[3578]\d{9}$/  //行首行尾匹配
+			var phone="13487977634";
+			alert(reg.test(phone));
+			
+			//把手机号的中间4位显示为****
+			var reg=/(\d{3})\d{4}(\d{4})/;
+			var phone="13475939494";
+			alert(phone.replace(reg,'$1****$2'));
+			
+			//验证是否是压缩文件
+			var reg=/\w+\.rar|zip|gz/;
+			var file="test.rar";
+			alert(reg.test(file));
+			
+			//验证邮箱
+			var reg=/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9_\.\-]+\.[a-zA-Z]+$/;
+			var email="xiaoming.hehe@13.com";
+			alert(reg.test(email));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

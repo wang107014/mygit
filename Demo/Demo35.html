@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>作用域</title>
+		<script>
+			//全局：
+			var name = "list";
+			//alert(window.name);
+			function show() {
+				alert(name);
+			}
+			//window.show();
+
+			//局部
+			function fun() {
+				//				var age=20;
+				//				alert(age);
+				return ss();
+
+				function ss() {
+					return 66;
+				}
+			}
+			//fun();
+			alert(fun());
+			//函数的参数：属于局部变量，作用域仅限于该函数。
+			function add(a,b){
+				return a+b;
+				
+			}
+			alert(add(3,4));
+			//不存在块级作用域。
+			if(true)
+			{
+				var a=90;//全局变量
+			}
+			alert(a);
+			for(var i=1;i<5;i++){
+				var num=90;
+				num=num+i;
+			}
+			alert(i);
+			alert(num);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>时间和日期</title>
+		<script>
+			var date=new Date();
+			//alert(date);
+			
+			var d1=new Date(1000); //1970.1.1  08:00:01;
+			//alert(d1);
+			
+			var d2=new Date("6/16/2009");
+			//alert(d2);
+			
+			var d3=new Date("May 4,2016");
+			//alert(d3)
+			
+			var d4=new Date("Mon Sep 04 2017 10:54:07 GMT+0800");
+			//alert(d4)
+			
+			var t1 =Date.parse("1/1/2011 08:00:00");
+			//alert(t1);
+			var d5=new Date(t1);
+			alert(d5);
+			//解决不同浏览器的兼容问题。
+			var t2=Date.UTC(1970,0,1,0,0,0);
+			alert(t2);
+			var d6=new Date(t2);
+			alert(d6);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
