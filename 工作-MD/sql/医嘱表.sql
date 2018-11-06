@@ -1,0 +1,24 @@
+
+//病人基本信息表
+SELECT * FROM PA_PatMas WHERE PAPMI_No='101100000080'
+
+//病人就诊信息表
+SELECT * FROM PA_Adm WHERE (PAADM_PAPMI_DR=96 AND PAADM_Type="I") 
+
+//医嘱表
+SELECT * FROM OE_Order WHERE OEORD_Adm_DR=935
+
+//医嘱表
+SELECT OEORI_ItmMast_DR->ARCIM_Desc,* FROM OE_OrdItem WHERE OEORI_OEORD_ParRef=877
+
+//医嘱项表
+SELECT * FROM ARC_ItmMast WHERE ARCIM_RowId IN ('6873||1')
+
+//医嘱执行表
+SELECT OEORE_OEORI_ParRef->OEORI_ItmMast_DR->ARCIM_Desc,* FROM OE_OrdExec WHERE OEORE_OEORI_ParRef IN ('877||1','877||2','877||3')
+
+//医嘱执行扩展表
+SELECT * FROM OE_OrdExecExt WHERE OEORE_OEORI_ParRef IN ('763||1','763||2')
+
+
+

@@ -1,0 +1,9 @@
+SELECT * FROM dhc_amtmag
+
+SELECT * FROM DHC_OPGroupSettings  WHERE GS_RowID="173"
+
+SELECT * FROM dhc_invoice 
+
+SELECT * FROM DHC_CardRef WHERE CF_CardNo="101100000080"
+
+SELECT * FROM PA_PatMas WHERE PAPMI_RowId1="189"
